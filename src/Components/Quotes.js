@@ -5,11 +5,21 @@ import {
   EmailShareButton,
   FacebookIcon,
   FacebookShareButton,
-  FacebookShareCount,
+  LinkedinIcon,
+  LinkedinShareButton,
+  RedditIcon,
+  RedditShareButton,
+  TelegramIcon,
+  TelegramShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
 } from "react-share";
 
 //Start a functional Component and receive the props
 export default function Quotes(props) {
+  const shareurl="https://anime-quoter.netlify.app";
   return (
     <>
       <section className="text-gray-400 bg-gray-900 body-font">
@@ -30,29 +40,33 @@ export default function Quotes(props) {
                   {/* Set Quotes props here */}
                 </p>
                 <a href="/" className="text-green-400 inline-flex items-center">
-                  {" "}
                   <ion-icon
                     className="mx-3"
                     name="share-social-outline"
                   ></ion-icon>{" "}
-                  Share via &nbsp;
+                  Share this Quote Via &nbsp;
                 </a>
-                  <EmailShareButton openShareDialogOnClick url="https://localhoast:3000" subject="Read this awesome quote from Animes on AnimeQuoter" body={props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName+"\n Find more Quotes on AnimeQuoter"}>
-                  <EmailIcon size={35} round={true}/>
+                  <EmailShareButton className="mx-1" url={shareurl} subject="Read this awesome quote from Animes on AnimeQuoter" body={props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName+"\n Find more Quotes on AnimeQuoter"}>
+                  <EmailIcon size={35} round={true} />
                   </EmailShareButton>
-                  <FacebookShareButton url="https://www.google.com" quote={"Read this awesome quote from Animes on AnimeQuoter  \n" + props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName} openShareDialogOnClick>
-                  <FacebookIcon size={35} round={true}/>
+                  <FacebookShareButton className="mx-1" url={shareurl} quote={"Read this awesome quote from Animes on AnimeQuoter-  \n" + props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName} >
+                  <FacebookIcon size={35} round={true} />
                   </FacebookShareButton>
-                <div className="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
-                  <ion-icon
-                    className="mx-3"
-                    name="share-social-outline"
-                  >
-                    </ion-icon>5
-                    <FacebookShareCount url="https://www.google.com">
-                    {shareCount => <span className="myShareCountWrapper">{shareCount}</span>}
-                    </FacebookShareCount>
-                </div>
+                  <TwitterShareButton className="mx-1" url={shareurl} title={"Read this awesome quote from Animes on AnimeQuoter-  \n" + props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName} via={"skyrunner360"} hashtags={["#Animequoter","#Animechan","#Anime","#Quotes","#ReactApp"]} related={["@skyrunner360"]}>
+                    <TwitterIcon size={35} round={true} />
+                  </TwitterShareButton>
+                  <LinkedinShareButton className="mx-1" url={shareurl} title={"Read this awesome quote from Animes on AnimeQuoter-  \n" + props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName} summary="Anime-Quoter is a React App to give you quotes from Animes you already love" source={shareurl}>
+                    <LinkedinIcon size={35} round={true} />
+                  </LinkedinShareButton>
+                  <RedditShareButton className="mx-1" url={shareurl} title={"Read this awesome quote from Animes on AnimeQuoter-  \n" + props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName}>
+                    <RedditIcon size={35} round={true} />
+                  </RedditShareButton>
+                  <WhatsappShareButton className="mx-1" url={shareurl} title={"Read this awesome quote from Animes on AnimeQuoter-  \n" + props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName}>
+                    <WhatsappIcon size={35} round={true} />
+                  </WhatsappShareButton>
+                  <TelegramShareButton className="mx-1" url={shareurl} title={"Read this awesome quote from Animes on AnimeQuoter-  \n" + props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName}>
+                    <TelegramIcon size={35} round={true} />
+                  </TelegramShareButton>
               </div>
             </div>
             
