@@ -52,7 +52,7 @@ export default function Quotes(props) {
                   <FacebookShareButton className="mx-1" url={shareurl} quote={"Read this awesome quote from Animes on AnimeQuoter-  \n" + props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName} >
                   <FacebookIcon size={35} round={true} />
                   </FacebookShareButton>
-                  <TwitterShareButton className="mx-1" url={shareurl} title={"Read this awesome quote from Animes on AnimeQuoter-  \n" + props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName} via={"skyrunner360"} hashtags={["#Animequoter","#Animechan","#Anime","#Quotes","#ReactApp"]} related={["@skyrunner360"]}>
+                  <TwitterShareButton className="mx-1" url={shareurl} title={"Read this awesome quote from Animes on AnimeQuoter-  \n" + props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName} via={"skyrunner360"} hashtags={["Animequoter","Animechan","Anime","Quotes","ReactApp"]} related={["@skyrunner360"]}>
                     <TwitterIcon size={35} round={true} />
                   </TwitterShareButton>
                   <LinkedinShareButton className="mx-1" url={shareurl} title={"Read this awesome quote from Animes on AnimeQuoter-  \n" + props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName} summary="Anime-Quoter is a React App to give you quotes from Animes you already love" source={shareurl}>
