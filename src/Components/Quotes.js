@@ -39,13 +39,13 @@ export default function Quotes(props) {
                   {props.quotes}
                   {/* Set Quotes props here */}
                 </p>
-                <a href="/" className="text-green-400 inline-flex items-center">
+                <span className="text-green-400 inline-flex items-center">
                   <ion-icon
                     className="mx-3"
                     name="share-social-outline"
                   ></ion-icon>{" "}
                   Share this Quote Via &nbsp;
-                </a>
+                </span>
                   <EmailShareButton className="mx-1" url={shareurl} subject="Read this awesome quote from Animes on AnimeQuoter" body={props.quotes+"\n -By " + props.character+ "\n From- "+props.animeName+"\n Find more Quotes on AnimeQuoter"}>
                   <EmailIcon size={35} round={true} />
                   </EmailShareButton>
