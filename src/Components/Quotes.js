@@ -6,14 +6,6 @@ import {
   FacebookIcon,
   FacebookShareButton,
   FacebookShareCount,
-  LinkedinShareButton,
-  PinterestShareButton,
-  RedditShareButton,
-  TelegramShareButton,
-  TwitterShareButton,
-  VKShareButton,
-  WhatsappShareButton,
-  WorkplaceShareButton,
 } from "react-share";
 
 //Start a functional Component and receive the props
@@ -37,7 +29,7 @@ export default function Quotes(props) {
                   {props.quotes}
                   {/* Set Quotes props here */}
                 </p>
-                <a href="#" className="text-green-400 inline-flex items-center">
+                <a href="/" className="text-green-400 inline-flex items-center">
                   {" "}
                   <ion-icon
                     className="mx-3"
