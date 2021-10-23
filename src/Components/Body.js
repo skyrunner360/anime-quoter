@@ -9,6 +9,8 @@ import Spinner from './Spinner'
 export default function Body(props) {
     const [anime, setAnime] = useState([]) //Create and set initial state of Anime as an empty array
     const [loading, setLoading] = useState(true) //Create and set the initial state of Loading as True
+    const [randAnime, setRandAnime] = useState([])//Create State for sending a single quote
+    const [visible, setVisible] = useState(false)
     //Function to Capitalize First Letter (not used as of now)
 
     // const capitalizeFirstLetter = (string)=>{
@@ -24,6 +26,15 @@ const fetchData= async()=>{
     setAnime(parsedData)//Store parsedData into Anime state
     setLoading(false)//Set loading to false to stop showing the loader
 }
+const randQuote = async ()=>{
+    const url=`https://animechan.vercel.app/api/random`
+    setLoading(true) //Loading should be true until the data is fetched
+    let data = await fetch(url); //Fetch data in data variable
+    let parsedData = await data.json(); //Convert the fetched data into json with await and store it into parsedData
+    setRandAnime(parsedData)//Store parsedData into RandAnime state
+    setLoading(false)
+    setVisible(true);
+}
 // useEffect is Similar to componentDidMount and componentDidUpdate:
 useEffect(() => {
     document.title = `Anime Quoter`
@@ -35,12 +46,19 @@ useEffect(() => {
         // Create a dummy component to fit the page into by using empty tags <>
         <>  
             <div className="text-gray-400 bg-gray-900 body-font">
-            <Navbar/>
+            <Navbar rand={randQuote}/>
             {/* Render the navbar into this div */}
-            <h1 className="my-2 text-center text-gray-100 bg-gray-900 body-font" style={{margin: '35px 0px', marginTop:'90px'}}>Here are some Quotes from Animes for You</h1>
-            <h2 className="my-2 text-center text-gray-100 bg-gray-900 body-font" style={{margin: '35px 0px', marginTop:'90px'}}>Refresh for More Quotes and immerce yourself in the mesmerizing world of Anime</h2>
+            <h1 className="my-2 text-center text-gray-100 bg-gray-900 body-font" style={{margin: '35px 0px', marginTop:'90px'}}>Here are some Quotes from Animes for You.</h1>
+            <h2 className="my-2 text-center text-gray-100 bg-gray-900 body-font" style={{margin: '35px 0px', marginTop:'90px'}}>Refresh for More Quotes Or search for an anime or quote from an anime character in the search bar above and immerce yourself in the mesmerizing world of Anime.</h2>
             {loading && <Spinner/>} 
-            {/* This show's the spinner only when the loading is true. Basically only when loading and spinner are true */}
+            {/* This show's the spinner only when the loading is true. Basically only when loading and spinner are true */}               
+                   {visible && <>
+                       <div className="clo-md-4" key={randAnime.quote}> 
+                            {/* Send quote as key to div so that react can differentiate. */}
+                                <Quotes quotes={randAnime.quote} character={randAnime.character} animeName={randAnime.anime} />
+                                {/* Send properties/props to quotes component */}
+                            </div>
+                            </>}
                  {anime.map(an=>{
                     //  The map() method creates a new array populated with the results of calling a provided function on every element in the calling array. 
                      //Map the data of anime state into 'an' 

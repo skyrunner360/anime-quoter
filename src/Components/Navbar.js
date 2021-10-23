@@ -1,10 +1,10 @@
 // Importing
 import React from 'react'
 
-export default function Navbar() {
+export default function Navbar(props) {
     return (
         <div>
-            <header className="text-gray-400 bg-gray-900 body-font">
+            <header className="text-gray-400 bg-gray-900 body-font sticky-top">
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <nav className="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
     </nav>
@@ -13,7 +13,11 @@ export default function Navbar() {
       <span className="ml-3 text-xl xl:block lg:hidden">Anime-Quoter</span>
     </a>
     <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-      <button className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Get a Random Quote
+    <form>
+      <input type="text" />
+      <a href="/" className="btn btn-sm btn-success mx-1">Search</a>
+    </form>
+      <button id="randQuote" onClick={props.rand} className="mx-1 inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base md:mt-0">Get a Random Quote
       </button>
     </div>
   </div>
