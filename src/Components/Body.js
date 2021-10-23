@@ -1,6 +1,5 @@
 //Importing
 import React,{useEffect,useState} from 'react'
-import ErrorBoundary from './ErrorBoundary'
 import Navbar from './Navbar'
 import Quotes from './Quotes'
 import Spinner from './Spinner'
@@ -69,21 +68,21 @@ useEffect(() => {
         // Create a dummy component to fit the page into by using empty tags <>
         <>   
             <div className="text-gray-400 bg-gray-900 body-font">
-                <ErrorBoundary>
+                
             <Navbar rand={randQuote} sAnime={sAnime} cAnime={cAnime} search={setSText}/>
-            </ErrorBoundary>
+            
             {/* Render the navbar into this div */}
             <h1 className="my-2 text-center text-gray-100 bg-gray-900 body-font" style={{margin: '35px 0px', marginTop:'90px'}}>Here are some Quotes from Animes for You.</h1>
             <h2 className="my-2 text-center text-gray-100 bg-gray-900 body-font" style={{margin: '35px 0px', marginTop:'90px'}}>Refresh for more Quotes or search for an anime or quote from an anime character in the search bar above and immerce yourself in the mesmerizing world of Anime.</h2>
             {loading && <Spinner/>} 
             {/* This show's the spinner only when the loading is true. Basically only when loading and spinner are true */}    
-            <ErrorBoundary>{visible && <>
+            {visible && <>
                 <div className="clo-md-4" key={randAnime.quote}> 
                     {/* Send quote as key to div so that react can differentiate. */}
                         <Quotes quotes={randAnime.quote} character={randAnime.character} animeName={randAnime.anime} />
                         {/* Send properties/props to quotes component */}
                     </div>
-                    </>}</ErrorBoundary><ErrorBoundary>
+                    </>}
             {sVisible && aSearch.map(an=>{
                         return(
                             <div className="clo-md-4" key={an.quote}> 
@@ -93,7 +92,7 @@ useEffect(() => {
                             </div>
                         );
                     })
-                    }   </ErrorBoundary><ErrorBoundary>
+                    }
             {sVisible && cSearch.map(an=>{
                 return(
                     <div className="clo-md-4" key={an.quote}> 
@@ -103,7 +102,7 @@ useEffect(() => {
                     </div>
                 );
             })
-            }      </ErrorBoundary><ErrorBoundary>    
+            } 
             {anime.map(an=>{
             //  The map() method creates a new array populated with the results of calling a provided function on every element in the calling array. 
                 //Map the data of anime state(array) into 'an' 
@@ -114,7 +113,7 @@ useEffect(() => {
                         {/* Send properties/props to quotes component */}
                     </div>
                 )
-            })}</ErrorBoundary>
+            })}
             </div>
         </>
     )
