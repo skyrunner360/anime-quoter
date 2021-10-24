@@ -70,7 +70,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - [x] Fetch Data From Animechan API ✅
 - [x] Set Data onto UI ✅
 - [x] Get a Single Random Quote from the API ✅
-- [ ] Search Functionality
+- [x] Search Functionality
   - [x] Search By anime Name ✅
   - [x] Search By Character Name ✅
 - [x] Set up Error Boundaries ✅
