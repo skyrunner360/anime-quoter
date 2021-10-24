@@ -7,6 +7,7 @@
 - [x] Search Functionality
   - [x] Search By anime Name ✅
   - [x] Search By Character Name ✅
+- [x] Share Quote Feature ✅
 - [x] Set up Error Boundaries ✅
 ---
 ## Technologies Used
