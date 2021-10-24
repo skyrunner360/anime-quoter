@@ -66,3 +66,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 ## Milestones
+- [x] Basic UI ✅
+- [x] Fetch Data From Animechan API ✅
+- [x] Set Data onto UI ✅
+- [x] Get a Single Random Quote from the API ✅
+- Search Functionality
+  - [x] Search By anime Name ✅
+  - [x] Search By Character Name ✅
+- [x] Set up Error Boundaries ✅
