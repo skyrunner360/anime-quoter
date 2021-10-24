@@ -13,6 +13,7 @@
 - Tailwind CSS
 - [Animechan API](https://github.com/rocktimsaikia/anime-chan)
 - Craco
+![GitHub followers](https://img.shields.io/github/followers/skyrunner360?label=Follow&style=social) ![Twitter Follow](https://img.shields.io/twitter/follow/skyrunner360?style=social) ![GitHub last commit](https://img.shields.io/github/last-commit/skyrunner360/anime-quoter)
 
 ---
 
