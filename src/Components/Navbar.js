@@ -18,9 +18,9 @@ export default function Navbar(props) {
     <form>
       <input type="text" onChange={(e) => props.search(e.target.value)} />
       {/* onChange Gives off a event object so get the event as a function parameter and in the function pass the prop with event's value */}
-      <button onClick={props.sAnime} className="mx-1 my-1 inline-flex items-center btn-success border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base md:mt-0">Anime Search</button>
-      <button onClick={props.cAnime} className="mx-1 my-1 inline-flex items-center btn-success border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base md:mt-0">Character Search</button>
     </form>
+      <button onClick={props.sAnime} className="mx-1 my-1 inline-flex items-center btn-success border-0 px-3 focus:outline-none hover:bg-gray-700 rounded text-base md:mt-0">Anime Search</button>
+      <button onClick={props.cAnime} className="mx-1 my-1 inline-flex items-center btn-success border-0 px-3 focus:outline-none hover:bg-gray-700 rounded text-base md:mt-0">Character Search</button>
     </div>
   </div>
 </header>
