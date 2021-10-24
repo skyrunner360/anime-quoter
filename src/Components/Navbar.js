@@ -14,13 +14,13 @@ export default function Navbar(props) {
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" className="w-10 h-10 text-white p-2 bg-green-500 rounded" viewBox="0 0 24 24"><path d="M12 6v3.028c0 2.337-1.529 3.91-3.684 4.335l-.406-.87c.996-.375 1.637-1.587 1.637-2.493h-1.547v-4h4zm5 0v3.028c0 2.337-1.529 3.91-3.684 4.335l-.406-.87c.996-.375 1.637-1.587 1.637-2.493h-1.547v-4h4zm5-3v13h-11.643l-4.357 3.105v-3.105h-4v-13h20zm2-2h-24v16.981h4v5.019l7-5.019h13v-16.981z"/></svg>
       <span className="ml-3 text-xl xl:block lg:hidden">Anime-Quoter</span>
     </a>
-    <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+    <div className="lg:w-2/5 inline-flex lg:justify-end ml-1 lg:ml-0" style={{display: "block"}}>
     <form>
       <input type="text" onChange={(e) => props.search(e.target.value)} />
       {/* onChange Gives off a event object so get the event as a function parameter and in the function pass the prop with event's value */}
     </form>
-      <button onClick={props.sAnime} className="mx-1 my-1 inline-flex items-center btn-success border-0 px-3 focus:outline-none hover:bg-gray-700 rounded text-base md:mt-0">Anime Search</button>
-      <button onClick={props.cAnime} className="mx-1 my-1 inline-flex items-center btn-success border-0 px-3 focus:outline-none hover:bg-gray-700 rounded text-base md:mt-0">Character Search</button>
+      <button onClick={props.cAnime} className="mx-1 my-1 inline-flex items-center btn-success border-0 px-3 py-1 focus:outline-none hover:bg-gray-700 rounded text-base md:mt-0">Character Search</button>
+      <button onClick={props.sAnime} className="mx-1 my-1 inline-flex items-center btn-success border-0 px-3 py-1 focus:outline-none hover:bg-gray-700 rounded text-base md:mt-0">Anime Search</button>
     </div>
   </div>
 </header>
