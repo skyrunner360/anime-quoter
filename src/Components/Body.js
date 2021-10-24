@@ -93,6 +93,7 @@ useEffect(() => {
                         );
                     })
                     }
+           
             {sVisible && cSearch.map(an=>{
                 return(
                     <div className="clo-md-4" key={an.quote}> 
