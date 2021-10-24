@@ -3,11 +3,11 @@
 - [x] Basic UI ✅
 - [x] Fetch Data From Animechan API ✅
 - [x] Set Data onto UI ✅
+- [x] Share Quote Feature (Using react-share component) ✅
 - [x] Get a Single Random Quote from the API ✅
 - [x] Search Functionality
   - [x] Search By anime Name ✅
   - [x] Search By Character Name ✅
-- [x] Share Quote Feature ✅
 - [x] Set up Error Boundaries ✅
 ---
 ## Technologies Used
