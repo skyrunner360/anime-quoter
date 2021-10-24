@@ -74,3 +74,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
   - [x] Search By anime Name ✅
   - [x] Search By Character Name ✅
 - [x] Set up Error Boundaries ✅
+---
+## Technologies Used
+- Reactjs
+- Tailwind CSS
+- [Animechan API](https://github.com/rocktimsaikia/anime-chan)
+- Craco
