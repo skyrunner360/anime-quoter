@@ -9,6 +9,7 @@
   - [x] Search By anime Name ✅
   - [x] Search By Character Name ✅
 - [x] Set up Error Boundaries ✅
+- [ ] Fix Fallback UI
 ---
 ## Technologies Used
 - Reactjs
