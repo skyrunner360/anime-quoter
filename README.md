@@ -1,6 +1,23 @@
-# Getting Started with Create React App
+![GitHub followers](https://img.shields.io/github/followers/skyrunner360?label=Follow&style=social) ![Twitter Follow](https://img.shields.io/twitter/follow/skyrunner360?style=social) ![GitHub last commit](https://img.shields.io/github/last-commit/skyrunner360/anime-quoter)
+## Milestones
+- [x] Basic UI ✅
+- [x] Fetch Data From Animechan API ✅
+- [x] Set Data onto UI ✅
+- [x] Share Quote Feature (Using react-share component) ✅
+- [x] Get a Single Random Quote from the API ✅
+- [x] Search Functionality
+  - [x] Search By anime Name ✅
+  - [x] Search By Character Name ✅
+- [x] Set up Error Boundaries ✅
+- [ ] Fix Fallback UI
+---
+## Technologies Used
+- Reactjs
+- Tailwind CSS
+- [Animechan API](https://github.com/rocktimsaikia/anime-chan)
+- Craco
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
 ## Available Scripts
 
@@ -68,3 +85,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
