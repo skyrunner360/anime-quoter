@@ -72,8 +72,8 @@ useEffect(() => {
             <Navbar rand={randQuote} sAnime={sAnime} cAnime={cAnime} search={setSText}/>
             
             {/* Render the navbar into this div */}
-            <h1 className="my-2 text-center text-gray-100 bg-gray-900 body-font" style={{margin: '35px 0px', marginTop:'90px'}}>Here are some Quotes from Animes for You.</h1>
-            <h2 className="my-2 text-center text-gray-100 bg-gray-900 body-font" style={{margin: '35px 0px', marginTop:'90px'}}>Refresh for more Quotes or search for an anime or quote from an anime character in the search bar above and immerce yourself in the mesmerizing world of Anime.</h2>
+            <h1 className="my-2 text-center text-gray-100 bg-gray-900 body-font" style={{margin: '35px 0px', marginTop:'90px',fontSize: "3vh"}}>Here are some Quotes from Animes for You.</h1>
+            <h2 className="my-2 text-center text-gray-100 bg-gray-900 body-font" style={{margin: '35px 0px', marginTop:'90px',fontSize: "2vh"}}>Refresh for more Quotes or search for an anime or quote from an anime character in the search bar above and immerce yourself in the mesmerizing world of Anime.</h2>
             {loading && <Spinner/>} 
             {/* This show's the spinner only when the loading is true. Basically only when loading and spinner are true */}    
             {visible && <>
@@ -93,7 +93,6 @@ useEffect(() => {
                         );
                     })
                     }
-           
             {sVisible && cSearch.map(an=>{
                 return(
                     <div className="clo-md-4" key={an.quote}> 
